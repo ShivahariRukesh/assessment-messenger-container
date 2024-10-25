@@ -1,0 +1,102 @@
+#scrollableDiv::-webkit-scrollbar {
+  width: 6px;
+}
+
+#scrollableDiv::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#scrollableDiv::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+#scrollableDiv::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#scrollableDiv {
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.profile-avatar.incoming-message {
+  background-color: #1890ff;
+  color: white;
+}
+.profile-avatar.outgoing-message {
+  background-color: white;
+  color: black;
+}
+.message-container {
+  flex: 3;
+
+  padding: 20px;
+  height: 100%;
+}
+
+.messenger-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.icon-btn:hover {
+  background-color: rgba(168, 163, 163, 0.295);
+}
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin: 0 10px;
+  outline: none;
+}
+
+.send-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.send-btn:hover {
+  background-color: #0056b3;
+}

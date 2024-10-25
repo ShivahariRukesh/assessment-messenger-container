@@ -1,0 +1,80 @@
+.contacts-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  background-color: rgb(109, 113, 117);
+  height: 94%;
+}
+.contacts-title {
+  font-size: 2rem;
+  background: linear-gradient(
+    to right,
+    rgb(33, 103, 182),
+    rgba(196, 105, 224, 0.842)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.typewriter-contacts h1 {
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end) alternate infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(3, 3, 3);
+  }
+}
+
+.send-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.send-btn:hover {
+  background-color: #0056b3;
+}
+
+.message-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+
+  margin: 0 10px;
+  outline: none;
+}
+
+.skeleton-container {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #636668;
+  height: 90%;
+}
