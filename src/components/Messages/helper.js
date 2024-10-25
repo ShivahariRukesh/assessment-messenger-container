@@ -1,5 +1,4 @@
 export function getInitials(name) {
-  //
   const filteredName = name.replace(/(Prof\.|Mr\.)\s*/g, "").trim();
 
   const nameParts = filteredName.split(" ");
