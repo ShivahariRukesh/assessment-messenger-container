@@ -4,13 +4,9 @@ import { fetchUsers, incrementPage } from "../../redux/userSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { List, Spin } from "antd";
 import "./styles.css";
-import {
-  FileOutlined,
-  GifOutlined,
-  PlusCircleFilled,
-  PlusSquareOutlined,
-} from "@ant-design/icons";
+import { FileOutlined, GifOutlined, PlusCircleFilled } from "@ant-design/icons";
 import { getInitials } from "./helper";
+
 const Messages = () => {
   const [isFetching, setIsFetching] = useState(false);
   const dispatch = useDispatch();
@@ -18,16 +14,16 @@ const Messages = () => {
 
   useEffect(() => {
     dispatch(fetchUsers(page));
-  }, []);
+  }, [dispatch, page]);
 
   const loadMoreUsers = useCallback(() => {
     if (!hasMore || isFetching) return;
-
     setIsFetching(true);
     setTimeout(() => {
       dispatch(incrementPage());
-      dispatch(fetchUsers(page + 1));
-      setIsFetching(false);
+      dispatch(fetchUsers(page + 1)).then(() => {
+        setIsFetching(false);
+      });
     }, 500);
   }, [dispatch, page, hasMore, isFetching]);
 
@@ -61,13 +57,19 @@ const Messages = () => {
             >
               {getInitials(user.name)}
             </div>
-
             <span style={{ marginLeft: 10, marginTop: 8 }}>{user.name}</span>
           </div>
         </div>
       </List.Item>
     );
   };
+
+  useEffect(() => {
+    const scrollableDiv = document.getElementById("scrollableDiv");
+    if (scrollableDiv) {
+      scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+    }
+  }, [users]);
 
   return (
     <div className="message-container">
@@ -115,9 +117,7 @@ const Messages = () => {
           className="message-input"
           placeholder="Just a demo..."
         />
-        <button className="send-btn" onClick>
-          Send
-        </button>
+        <button className="send-btn">Send</button>
       </div>
     </div>
   );
