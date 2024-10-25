@@ -15,12 +15,6 @@ const Messages = () => {
     dispatch(fetchUsers(page));
   }, []);
 
-  useEffect(() => {
-    console.log("first");
-    document.addEventListener("DOMContentLoaded", function () {
-      document.body.style.zoom = "110%";
-    });
-  }, []);
   const loadMoreUsers = useCallback(() => {
     if (!hasMore || isFetching) return;
 
