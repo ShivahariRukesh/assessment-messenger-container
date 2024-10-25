@@ -32,7 +32,6 @@ const Messages = () => {
   }, [dispatch, page, hasMore, isFetching]);
 
   const renderMessage = (user, index) => {
-    console.log("yo", user.name);
     const isIncoming = index % 2 === 0;
     return (
       <List.Item key={user.id}>
