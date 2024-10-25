@@ -14,9 +14,7 @@ const Contacts = () => {
           className="message-input"
           placeholder="Just a demo..."
         />
-        <button className="send-btn" onClick>
-          Search
-        </button>
+        <button className="send-btn">Search</button>
       </div>
       <div className="skeleton-container">
         <Skeleton active />

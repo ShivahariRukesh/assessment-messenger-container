@@ -15,6 +15,12 @@ const Messages = () => {
     dispatch(fetchUsers(page));
   }, []);
 
+  useEffect(() => {
+    console.log("first");
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.style.zoom = "110%";
+    });
+  }, []);
   const loadMoreUsers = useCallback(() => {
     if (!hasMore || isFetching) return;
 
@@ -110,9 +116,7 @@ const Messages = () => {
           className="message-input"
           placeholder="Just a demo..."
         />
-        <button className="send-btn" onClick>
-          Send
-        </button>
+        <button className="send-btn">Send</button>
       </div>
     </div>
   );
