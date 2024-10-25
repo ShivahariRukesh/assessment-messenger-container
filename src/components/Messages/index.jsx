@@ -13,7 +13,7 @@ const Messages = () => {
 
   useEffect(() => {
     dispatch(fetchUsers(page));
-  }, []);
+  }, [dispatch, page]);
 
   const loadMoreUsers = useCallback(() => {
     if (!hasMore || isFetching) return;
