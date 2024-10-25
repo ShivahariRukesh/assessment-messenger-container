@@ -82,7 +82,7 @@ const Messages = () => {
           hasMore={hasMore}
           loader={loading && <Spin />}
           scrollableTarget="scrollableDiv"
-          inverse={true}
+          inverse={false}
           // style={{ overflow: "unset" }}
         >
           <List
