@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers, incrementPage } from "../../redux/userSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { List, Avatar, Spin } from "antd";
+import { List, Spin } from "antd";
 import "./styles.css";
 import {
   FileOutlined,

@@ -16,6 +16,8 @@
 }
 
 #scrollableDiv {
+  overflow-y: auto;
+  height: 100%;
   scrollbar-width: thin;
   scrollbar-color: white transparent;
 }
