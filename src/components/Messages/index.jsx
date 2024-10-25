@@ -13,7 +13,7 @@ const Messages = () => {
 
   useEffect(() => {
     dispatch(fetchUsers(page));
-  }, [dispatch, page]);
+  }, []);
 
   const loadMoreUsers = useCallback(() => {
     if (!hasMore || isFetching) return;
@@ -83,7 +83,7 @@ const Messages = () => {
           loader={loading && <Spin />}
           scrollableTarget="scrollableDiv"
           inverse={true}
-          style={{ overflow: "unset" }}
+          // style={{ overflow: "unset" }}
         >
           <List
             dataSource={users}
