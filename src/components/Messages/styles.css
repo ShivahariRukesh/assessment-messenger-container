@@ -1,4 +1,4 @@
-#scrollableDiv::-webkit-scrollbar {
+/* #scrollableDiv::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -20,7 +20,7 @@
   height: 100%;
   scrollbar-width: thin;
   scrollbar-color: white transparent;
-}
+} */
 
 .profile-avatar {
   width: 40px;
