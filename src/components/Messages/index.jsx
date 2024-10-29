@@ -1,8 +1,8 @@
 // import React from "react";
-
+// import "./styles.css";
 // const index = () => {
 //   return (
-//     <div style={{ fontSize: "1cm" }}>
+//     <div className="message-container">
 //       For the figure sometimes referred to as Death, see Personifications of
 //       death. "Dead" redirects here. For other uses, see Dead (disambiguation)
 //       and Death (disambiguation). "Deceased" redirects here. For the band, see
@@ -141,7 +141,7 @@ const Messages = () => {
       <div
         id="scrollableDiv"
         style={{
-          height: "88%",
+          height: "85%",
           overflow: "auto",
           display: "flex",
           flexDirection: "column-reverse",
@@ -155,7 +155,7 @@ const Messages = () => {
           loader={loading && <Spin />}
           scrollableTarget="scrollableDiv"
           inverse={true}
-          style={{ overflow: "unset" }}
+          // style={{ overflow: "unset" }}
         >
           <List
             dataSource={users}
