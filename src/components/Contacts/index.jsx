@@ -17,10 +17,6 @@ const Contacts = () => {
         <button className="send-btn">Search</button>
       </div>
       <div className="skeleton-container">
-        <div style={{ fontSize: "x-large", marginBottom: "10px" }}>
-          Please Go TO Debugger Mode (Press Ctrl+Shift+I) <br />
-          To Activate the scrolling mode to view new messages
-        </div>
         <Skeleton active />
         <Skeleton active />
         <Skeleton active />
